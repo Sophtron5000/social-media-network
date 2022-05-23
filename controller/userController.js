@@ -36,5 +36,23 @@ deleteUser(req, res) {
         }
         res.json(user)
     }).catch((err) => res.status(500).json(err));
+},
+addFriend(req, res) {
+    User.findOneAndUpdate({_id: req.params.id}, {$addToSet: { Friends: req.params.friendsId}})
+    .then((user) => {
+        if (!user) {
+            return res.status(404).json("invalid user")
+        }
+        res.json(user)
+    }).catch((err) => res.status(500).json(err));
+},
+deleteFriend(req, res) {
+    User.findByIdAndDelete({_id: req.params.id})
+    .then((user) => {
+        if (!user) {
+            res.status(404).json("invalid user")
+        }
+        res.json(user)
+    }).catch((err) => res.status(500).json(err));
 }
 };
