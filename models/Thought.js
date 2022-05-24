@@ -16,7 +16,7 @@ const thoughtSchema = new Schema(
                 return timestamp
             }
         },
-        userName: {
+        userId: {
             type: Schema.Types.ObjectId,
             ref: 'User',
         },
