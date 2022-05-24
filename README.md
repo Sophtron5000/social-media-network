@@ -17,10 +17,14 @@ Thi is a back end social network. It was make using MongoDB and Mongoose NPM. Us
 
 Clone to you local PC
 In terminal at the root directory run commands
-`npm I`
+
+`npm install`
+
 `node server.js`
+
 Test in Insomnia at localhost:3001
 
+[Demo Video](https://drive.google.com/file/d/1QhGhXUUaP1kN2-kx_BtyxVHienMEZy79/view)
 
 ## Features
 
